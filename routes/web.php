@@ -33,8 +33,8 @@ Route::put('/departamentos/{departamento}',[DepartamentoController::class, 'upda
 Route::get('/departamentos/{departamento}/edit',[DepartamentoController::class, 'edit']) -> name('departamentos.edit');
 // paises
 Route::get('/paises', [PaisController::class, 'index']) -> name('paises.index');
-// Route::post('/paises', [PaisController::class, 'store']) ->name('paises.store') ;
-// Route::get('/paises/create', [PaisController::class, 'create']) -> name('paises.create');
-// Route::delete('/paises/{pais}',[PaisController::class, 'destroy']) -> name('paises.destroy');
+Route::post('/paises', [PaisController::class, 'store']) ->name('paises.store') ;
+Route::get('/paises/create', [PaisController::class, 'create']) -> name('paises.create');
+Route::delete('/paises/{pais}',[PaisController::class, 'destroy']) -> name('paises.destroy');
 // Route::put('/paises/{pais}',[PaisController::class, 'update']) -> name('paises.update');
 // Route::get('/paises/{pais}/edit',[PaisController::class, 'edit']) -> name('paises.edit');

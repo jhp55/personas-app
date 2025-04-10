@@ -13,7 +13,7 @@
   <body>
     <div class="container">
         <h1>Listado de pais</h1>
-        {{-- <a href="{{ route('pais.create')}}" class="btn btn-success">Add</a> --}}
+        <a href="{{ route('paises.create')}}" class="btn btn-success">Add</a>
         <table class="table">
             <thead>
               <tr>
@@ -31,14 +31,14 @@
                         <td>{{ $pais->pais_capi }}</td>
                         <td>
                             {{-- <a href="{{route('pais.edit', ['pais' => $pais->pais_codi])}}"
-                            class="btn btn-info">Edit</a></li>
+                            class="btn btn-info">Edit</a></li> --}}
 
-                          <form action="{{route('pais.destroy',['pais' => $pais->pais_codi])}}"
+                          <form action="{{route('paises.destroy',['pais' => $pais->pais_codi])}}"
                             method="POST" style="display: inline-block">
                             @method('delete')
                             @csrf
                             <input type="submit" class="btn btn-danger" value="Delete">
-                          </form> --}}
+                          </form>
                         </td>
                     </tr> 
                 @endforeach
